@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Head from 'next/head'
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -20,6 +21,9 @@ export default function Home() {
   
   return (
     <div className="wrapper">
+      <Head>
+        <title>Bank app</title>
+      </Head>
       {isOpen && <Burgermenu />}
       <Header open={handleOpen} close={handleClose} isOpen={isOpen}/>
       <Hero />
